@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ftl_ma;
+
+service Auth {
+
+    rpc check(CheckReq) returns (CheckRsp);
+}
+
+message CheckReq {
+}
+
+message CheckRsp {
+    string err_code = 1;
+    string err_msg = 2;
+}
